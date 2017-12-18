@@ -6,7 +6,7 @@
 
 def checkForPalindrome(int)
 	array = int.to_s.chars
-	half = floor(array.length/2)
+	half = (array.length/2)
 	looping_array = [*0..half]
 
 	looping_array.each do |num|
@@ -20,13 +20,15 @@ end
 
 def dumbSolution
 	product = 0
-	three_digit = [*(100..999), :top, *999.downto( 100 )]
-	second_array = [*(100..999), :top, *999.downto( 100 )]
+	three_digit = [*100..999].reverse
+	second_array = [*100..999].reverse
 
 	three_digit.each do |num|
 		second_array.each do |second_num|
 			product = num*second_num
-			break if checkForPalindrome(product)
+			if checkForPalindrome(product)
+				return product
+			end
 		end
 	end
 	product
