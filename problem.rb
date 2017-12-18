@@ -20,6 +20,7 @@ end
 
 def dumbSolution
 	product = 0
+	highest_product = 0
 	three_digit = [*100..999].reverse
 	second_array = [*100..999].reverse
 
@@ -27,9 +28,11 @@ def dumbSolution
 		second_array.each do |second_num|
 			product = num*second_num
 			if checkForPalindrome(product)
-				return product
+				if highest_product < product
+					highest_product = product
+				end
 			end
 		end
 	end
-	product
+	highest_product
 end
