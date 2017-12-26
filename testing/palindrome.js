@@ -4,6 +4,11 @@
 	//Array.from() makes a copy of an array
 
 function checkForPalindrome(number){
+	//error handling
+	if (!Number.isInteger(number)){
+		return false
+	}
+	//actual comparison
 	const forward = number.toString()
 	const reverse = forward.split('').reverse().join('')
 	return forward === reverse
@@ -13,13 +18,6 @@ function checkForPalindrome(number){
 
 //this object is what is returned by require in the spec file
 module.exports = {checkForPalindrome}
-
-
-
-
-
-
-
 
 
 

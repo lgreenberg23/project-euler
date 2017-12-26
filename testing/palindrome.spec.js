@@ -12,7 +12,7 @@ const checkForPalindrome = require('./palindrome.js').checkForPalindrome
 describe('checkForPalindrome', function(){
 	// context('if number is same forward and backward', function () {
 	// 	test('returns true')
-	})
+	// })
 	test('returns true if number is the same forward and backward', function(){
 		//tell the test to do something and expect that that thing equals some value
 		//or asserts something about what we did
@@ -25,4 +25,7 @@ describe('checkForPalindrome', function(){
 		expect(checkForPalindrome(2075)).toEqual(false)
 	})
 	//could write tests for other input like strings or negative numbers
+	test('return false if user inputs a string', function(){
+		expect(checkForPalindrome('racecar')).toEqual(false)
+	})
 })
