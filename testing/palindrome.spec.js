@@ -25,7 +25,7 @@ describe('checkForPalindrome', function(){
 		expect(checkForPalindrome(2075)).toEqual(false)
 	})
 	//could write tests for other input like strings or negative numbers
-	test('return false if user inputs a string', function(){
+	test('return false if user does not input an integer', function(){
 		expect(checkForPalindrome('racecar')).toEqual(false)
 	})
 })
