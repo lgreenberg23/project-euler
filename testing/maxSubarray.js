@@ -9,25 +9,30 @@
 
  //0(n2 solution)
 var maxSubArray = function(nums) {
-    let maxSum = 0
+    let maxSum = nums[0]
     let currentSum = 0
 
-    let begin = nums[i]
-
+    let begin = nums[0]
+    
     if(nums.length === 1){
     	return nums[0]
     }
     
-    for(let i=0; i<nums.length-2; i++){
+    for(let i=0; i<nums.length; i++){
     	begin = nums[i]
     	currentSum = begin
-    	for (let j=i+1; j<nums.length-1; j++){
-    		currentSum += nums[j]
+    	for (let j=i+1; j<nums.length; j++){
+    		  currentSum += nums[j]
     		if(currentSum > maxSum){
     			maxSum = currentSum
     		}
     	}
-        
-    }
-    return maxSum
+    	if(begin > maxSum){
+    		maxSum = begin
+      }
+      if(currentSum > maxSum){
+    		maxSum = currentSum
+    	}
+   }
+   return maxSum
 };
