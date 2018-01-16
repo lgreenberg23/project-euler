@@ -13,6 +13,10 @@ var maxSubArray = function(nums) {
     let currentSum = 0
 
     let begin = nums[i]
+
+    if(nums.length === 1){
+    	return nums[0]
+    }
     
     for(let i=0; i<nums.length-2; i++){
     	begin = nums[i]
