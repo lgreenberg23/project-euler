@@ -1,3 +1,17 @@
+
+function doorsFastest(){
+  for (var door = 1; door <= 100; door++) {
+    var sqrt = Math.sqrt(door);    
+    //if (sqrt === (sqrt | 0)) { 
+
+    	//if the number is actually already a whole integer aka is a sq. rt
+    if (sqrt === Math.floor(sqrt)){    
+        console.log("Door %d is open", door);  
+     }
+  }
+}
+
+
 function doors(){
 	//initialize doors
 	let doorsOpen = []
@@ -18,11 +32,11 @@ function doors(){
 function doorsFaster(){
 	//initialize doors
 	let doorsOpen = []
-	for(let i=0; i<101; i++){
+	for(let i=0; i<=100; i++){
 		doorsOpen[i] = false
 	}
 
-	for(let k=1; k<=50; k++){
+	for(let k=1; k<=100; k++){
 		//go through the primes 
 		for(let j=1; j<=k; j++){
 
